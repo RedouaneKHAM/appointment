@@ -2,9 +2,10 @@
 <div class="row">
 <div class="col">
 <h1>Arrangements</h1>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis ipsa expedita non aliquid adipisci nobis veniam facilis quo culpa ut molestias, quod et unde quia reprehenderit? Placeat soluta aliquid iure!</p>
+<p>Votre rendez-vous est initié avec succès</p>
 <ul><% @arrangements.each do |arrangement| %></ul>
         <li><%= arrangement.subject %></li>
+
         <li><%= arrangement.date %></li>
     <% end %>
 </div>
