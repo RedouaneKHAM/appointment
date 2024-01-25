@@ -15,7 +15,7 @@ class ArrangementsController < ApplicationController
     if current_user.client.blank?
       Client.create!(user_id: current_user.id)
     end
-    @arrangement.client_id = current_user.id
+    @arrangement.client_id = current_user.client.id
     @arrangement.agent_id = Agent.first.id
     if @arrangement.save!
       redirect_to arrangement_path(@arrangement)
