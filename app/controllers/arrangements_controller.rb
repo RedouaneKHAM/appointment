@@ -3,18 +3,22 @@ class ArrangementsController < ApplicationController
     @arrangements = Arrangement.all
   end
 
+  def show
+    @arrangement = Arrangement.find(params[:id])
+  end
   def new
     @arrangement = Arrangement.new
   end
 
   def create
     @arrangement = Arrangement.new(arrangement_params)
-    Client.create!(user_id: current_user.id) if current_user.client.blank?
-
+    if current_user.client.blank?
+      Client.create!(user_id: current_user.id)
+    end
     @arrangement.client_id = current_user.client.id
     @arrangement.agent_id = Agent.first.id
     if @arrangement.save!
-      redirect_to arrangements_path
+      redirect_to arrangement_path(@arrangement)
     else
       render :new, status: :unprocessable_entity
     end
