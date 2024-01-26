@@ -2,7 +2,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 153px 0;
+  padding: 5px 0;
 }
 
 .banner h1 {
@@ -27,12 +27,55 @@
   background: linear-gradient(#167FFB, #0F60C4);
   transition: background 0.3s ease;
   border: 1px solid #0F60C4;
-  margin : 0px 480px;
+  margin : 0px 580px;
 }
 
 .btn-gradient:hover {
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
+}
+
+.carde {
+  width: 100%;
+  height: 500px;
+  border-radius: 4px;
+  background:rgba(5, 5, 5, 0);
+  display: inline-flex;
+  gap: 5px;
+  padding: .4em;
+  margin-top: 25px;
+}
+
+.carde p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .5s;
+  background: #212121;
+  border: 1px solid rgba(5, 5, 5, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carde p:hover {
+  flex: 4;
+}
+
+.carde p span {
+  min-width: 14em;
+  padding: .5em;
+  text-align: center;
+  transition: all .5s;
+  text-transform: uppercase;
+  color: #f7fff6;
+  letter-spacing: .1em;
+}
+
+.carde p:hover span {
+  transform: rotate(0);
 }
 
 .footer {
@@ -42,7 +85,7 @@
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  margin: 10px 385px
+  margin: 10px 492px
 }
 .footer-links {
   display: flex;
@@ -61,4 +104,3 @@
 .footer .fa-heart {
   color: #D23333;
 }
-
