@@ -13,7 +13,9 @@ class ArrangementsController < ApplicationController
   def create
     @arrangement = Arrangement.new(arrangement_params)
     if current_user.client.blank?
-      Client.create!(user_id: current_user.id)
+      client = Client.new(user_id: current_user.id)
+      client.save
+      current_user.client = client
     end
     @arrangement.client_id = current_user.client.id
     @arrangement.agent_id = Agent.first.id

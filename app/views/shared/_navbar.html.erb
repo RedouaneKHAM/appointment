@@ -17,7 +17,7 @@
 
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "Messages", "/arrangements/", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,7 +30,12 @@
           </li>
         <% else %>
           <li class="nav-item">
+            <%= link_to "About", root_path, class: "nav-link" %>
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Sign up", root_path, class: "nav-link" %>
+            <%= link_to "Products", root_path, class: "nav-link" %>
+            <%= link_to "Solutions", root_path, class: "nav-link" %>
+            <%= link_to "FAQ", root_path, class: "nav-link" %>
           </li>
         <% end %>
       </ul>
