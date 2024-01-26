@@ -1,13 +1,22 @@
 <div class="container">
 <div class="row">
 <div class="col">
+<div style="text-align:center">
 <h1>Arrangements</h1>
 <p>Votre rendez-vous est initié avec succès</p>
-<ul><% @arrangements.each do |arrangement| %></ul>
-        <li><%= arrangement.subject %></li>
+</div>
 
-        <li><%= arrangement.date %></li>
-    <% end %>
+<div class="card">
+  <div class="bg">
+  <div class="mt-4">
+  <% @arrangements.each do |arrangement| %>
+  <div style="text-align:center" >
+        <strong> Message : </strong>
+        <%= arrangement.subject %>
+        <li><strong> Date & Heure : </strong>
+        <%= arrangement.date %></li>
+    <% end %> </div>
+
 </div>
 </div>
 </div>
