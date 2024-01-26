@@ -1,13 +1,18 @@
-<div class="container">
-<div class="row">
-<div class="col">
-<h1>Arrangements</h1>
-<p>Votre rendez-vous est initié avec succès</p>
-<% @arrangements.each do |arrangement| %>
-        <p>Message: <%=arrangement.subject %></p>
-        <p>Appointement: <%=arrangement.date %></p>
-        <p>Status: <%=arrangement.status  %></p>
-    <% end %>
-</div>
-</div>
-</div>
+<%= stylesheet_link_tag 'components/arrangements_page' %>
+<div class="container mt-5">
+   <h1 class="text-center mb-2">Arrangements</h1>
+    <div>
+    <div class="cards">
+    <div class="new-card ">
+	  <% @arrangements.each do |arrangement| %>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title text-center">Your appointement day and time is  <%=arrangement.date %></h5>
+            <h5 class="card-text text-center">Your message is <%=arrangement.subject %></h5>
+            <div class="d-grid gap-2">
+	          <button class="btn btn-warning btn-lg "><%=arrangement.status %></button></div>
+            </div>
+        </div>
+      <% end %>
+    </div>
+    </div>
