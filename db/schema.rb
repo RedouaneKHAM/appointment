@@ -28,7 +28,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_24_143815) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "subject"
-    t.integer "status", default: 0
+    t.string "status", default: "PENDING"
     t.index ["agent_id"], name: "index_arrangements_on_agent_id"
     t.index ["client_id"], name: "index_arrangements_on_client_id"
   end
