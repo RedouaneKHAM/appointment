@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background :gray;
+  background :#E3DAD7
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,6 +10,7 @@
 .navbar-lewagon .navbar-brand img {
   width: 60px;
   border-radius: 20%;
+  margin-bottom: 2px;
 }
 
 .navbar-brand {
@@ -18,4 +19,9 @@
 
   .nav-item {
   font-family :Verdana, Geneva, Tahoma, sans-serif;
+  display :flex;
+  font-size :1.1em
   }
+.navbar-brand {
+  height :auto
+}
