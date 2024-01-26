@@ -6,6 +6,7 @@ class ArrangementsController < ApplicationController
   def show
     @arrangement = Arrangement.find(params[:id])
   end
+
   def new
     @arrangement = Arrangement.new
   end
@@ -13,7 +14,9 @@ class ArrangementsController < ApplicationController
   def create
     @arrangement = Arrangement.new(arrangement_params)
     if current_user.client.blank?
-      Client.create!(user_id: current_user.id)
+      client = Client.new(user_id: current_user.id)
+      client.save
+      current_user.client = client
     end
     @arrangement.client_id = current_user.client.id
     @arrangement.agent_id = Agent.first.id
@@ -27,6 +30,6 @@ class ArrangementsController < ApplicationController
   private
 
   def arrangement_params
-    params.require(:arrangement).permit(:date, :subject, :agent_id, :client_id)
+    params.require(:arrangement).permit(:date, :subject, :agent_id)
   end
 end

@@ -1,6 +1,19 @@
 <%= simple_form_for @arrangement do |f| %>
-  
-  <%= f.input :date %>
-  <%= f.text_area :subject %>
-  <%= f.button :submit %>
+  <div class="form-inputs">
+    <div class="mx-auto" style="width: 1200px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <%= f.input :date %>
+        </div>
+        <div class="col-6">
+          <%= f.text_area :subject, class: "col-6 mt-4" %><br>
+        </div>
+      </div>
+    </div>
+          <div class="mx-auto" style="width: 200px;">
+            <%= f.button :submit, class: "btn btn-primary" %>
+          </div>
+    </div>
+  </div>
 <% end %>

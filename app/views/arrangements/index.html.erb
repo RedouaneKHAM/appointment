@@ -3,10 +3,10 @@
 <div class="col">
 <h1>Arrangements</h1>
 <p>Votre rendez-vous est initié avec succès</p>
-<ul><% @arrangements.each do |arrangement| %></ul>
-        <li><%= arrangement.subject %></li>
-
-        <li><%= arrangement.date %></li>
+<% @arrangements.each do |arrangement| %>
+        <p>Message: <%=arrangement.subject %></p>
+        <p>Appointement: <%=arrangement.date %></p>
+        <p>Status: <%=arrangement.status  %></p>
     <% end %>
 </div>
 </div>
