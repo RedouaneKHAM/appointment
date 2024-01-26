@@ -6,6 +6,7 @@ class ArrangementsController < ApplicationController
   def show
     @arrangement = Arrangement.find(params[:id])
   end
+
   def new
     @arrangement = Arrangement.new
   end
@@ -29,6 +30,6 @@ class ArrangementsController < ApplicationController
   private
 
   def arrangement_params
-    params.require(:arrangement).permit(:date, :subject, :agent_id, :client_id)
+    params.require(:arrangement).permit(:date, :subject, :agent_id)
   end
 end

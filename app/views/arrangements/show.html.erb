@@ -1,9 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col">
-    <p>Message: <%=@arrangement.subject %></p>
-    <p>Appointement: <%=@arrangement.date %></p>
-    <p>Status</p><button class="btn btn-warning"><%=@arrangement.status %></button>
+      <div class="card text-center mt-3 ">
+        <div class="card-header"> <strong>Your arrangement</strong></div>
+        <div class="card-body">
+          <h5 class="card-title fst-italic">Your appointement day and time:  <%=@arrangement.date %></h5>
+          <h5 class="card-text fst-italic">Your message: <%=@arrangement.subject %></h5>
+                  <button class="btn btn-warning btn-lg"><%=@arrangement.status %></button>
+        </div>
+      </div>
     </div>
     </div>
   </div>
