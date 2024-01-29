@@ -5,7 +5,7 @@
         <div class="card-body">
           <h5 class="card-title fst-italic">Your appointement day and time:  <%=@arrangement.date %></h5>
           <h5 class="card-text fst-italic">Your message: <%=@arrangement.subject %></h5>
-            <button class="btn btn-warning btn-lg mt-3"><%=@arrangement.status %></button>
+            <button class="btn btn-warning btn-lg mt-3"><%=@arrangement.status %></button><br>
             <%= link_to "Edit your arrangement", edit_arrangement_path, class: "btn btn-primary btn-lg mt-3" %>
             <%= link_to "Delete your arrangement",arrangement_path(@arrangement),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger btn-lg mt-3"%>
         </div>
