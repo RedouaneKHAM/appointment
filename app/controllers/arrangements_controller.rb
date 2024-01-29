@@ -27,6 +27,26 @@ class ArrangementsController < ApplicationController
     end
   end
 
+    def edit
+      @arrangement = Arrangement.find(params[:id])
+    end
+
+    def update
+      @arrangement = Arrangement.find(params[:id])
+      @arrangement.update(arrangement_params)
+      if @arrangement.save!
+        redirect_to arrangement_path(@arrangement)
+      else
+        render :edit, status: :unprocessable_entity
+      end
+    end
+
+    def destroy
+      @arrangement = Arrangement.find(params[:id])
+      @arrangement.destroy
+      redirect_to arrangements_path, status: :see_other
+    end
+    
   private
 
   def arrangement_params

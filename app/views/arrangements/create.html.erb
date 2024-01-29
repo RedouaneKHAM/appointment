@@ -6,6 +6,7 @@
       <ul><% @arrangements.each do |arrangement| %></ul>
         <li><%= arrangement.subject %></li>
         <li><%= arrangement.date %></li>
+        <%= link_to "Edit your arrangement", edit_arrangement_path %>
       <% end %>
       </div>
   </div>
