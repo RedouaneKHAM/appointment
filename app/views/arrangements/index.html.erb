@@ -2,18 +2,16 @@
 <div class="container mt-10">
    <h1 class="text-center mb-2">Arrangements</h1>
     <div class="cards">
-      <div class="new-card ">
       <% @arrangements.each do |arrangement| %>
           <div class="card mb-4">
             <div class="card-body">
-              <h5 class="card-title text-center"><strong>Your appointement day and time is </strong>  <%=arrangement.date %></h5>
-              <h5 class="card-text text-center"><strong>Your message is </strong> <%=arrangement.subject %></h5>
+              <h5 class="card-title text-center"><strong>Your appointment day and time is </strong><%= arrangement.date %></h5>
+              <h5 class="card-text text-center"><strong>Your message is </strong><%= arrangement.subject %></h5>
                 <div class="d-grid gap-2">
-                  <button class="btn btn-warning btn-lg "><%=arrangement.status %></button>
+                  <button class="btn btn-warning btn-lg"><%= arrangement.status %></button>
                 </div>
-              <% end %>
-              </div>
+            </div>
           </div>
-      </div>
+      <% end %>
     </div>
 </div>
